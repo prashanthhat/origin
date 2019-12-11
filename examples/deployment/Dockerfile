@@ -3,7 +3,7 @@
 #
 # The standard name for this image is openshift/deployment-example
 #
-FROM scratch
+FROM busybox
 
 MAINTAINER Clayton Coleman <ccoleman@redhat.com>
 COPY bin/deployment /deployment

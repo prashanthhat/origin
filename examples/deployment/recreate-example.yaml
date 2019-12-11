@@ -28,8 +28,10 @@ items:
           deploymentconfig: recreate-example
       spec:
         containers:
-        - image: openshift/deployment-example:v1
+        #- image: openshift/deployment-example:v1
+        - image: openshifttests/deployment-example:v1
           name: deployment-example
+          imagePullPolicy: Always
           ports:
           - containerPort: 8080
             protocol: TCP
@@ -48,7 +50,8 @@ items:
   metadata:
     name: recreate-example
   spec:
-    dockerImageRepository: openshift/deployment-example
+    #dockerImageRepository: openshift/deployment-example
+    dockerImageRepository: openshifttests/deployment-example
 - apiVersion: v1
   kind: Route
   metadata:
