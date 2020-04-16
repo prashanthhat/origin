@@ -29,7 +29,7 @@ items:
       spec:
         containers:
         #- image: openshift/deployment-example:v1
-        - image: multiarch-origin-e2e/deployment-example:v1
+        - image: quay.io/multiarch-origin-e2e/deployment-example:v1
           name: deployment-example
           imagePullPolicy: Always
           ports:
@@ -51,7 +51,7 @@ items:
     name: recreate-example
   spec:
     #dockerImageRepository: openshift/deployment-example
-    dockerImageRepository: multiarch-origin-e2e/deployment-example
+    dockerImageRepository: quay.io/multiarch-origin-e2e/deployment-example
 - apiVersion: v1
   kind: Route
   metadata:
